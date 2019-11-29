@@ -24,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TextView dustTxt, house_tem;
     RequestQueue mQueue;
 
-    Double lon, lat;
-    //WeatherInfo weatherInfo;
+    private Double lon, lat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
             }
         else{
             Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            lon = location.getLongitude();
-            lat = location.getLatitude();
+            setLon(location.getLongitude());
+            setLat(location.getLatitude());
         }
 
         mTextViewResult = findViewById(R.id.tem_hum);
@@ -62,6 +61,22 @@ public class MainActivity extends AppCompatActivity {
     public void startForcast(View view){
         Intent intent = new Intent(this, ForecastActivity.class);
         startActivity(intent);
+    }
+
+    public Double getLon() {
+        return lon;
+    }
+
+    public void setLon(Double lon) {
+        this.lon = lon;
+    }
+
+    public Double getLat() {
+        return lat;
+    }
+
+    public void setLat(Double lat) {
+        this.lat = lat;
     }
 
 

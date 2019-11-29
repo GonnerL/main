@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/refreshLayout"
+    android:background="@drawable/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,7 +11,7 @@
         android:id="@+id/layout_weather"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_night"
+        android:background="@drawable/back"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -62,8 +63,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="15dp"
                         android:textColor="@color/white_two"
-                        android:textSize="25sp"
-                        tools:text="맑음" />
+                        android:textSize="25sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/alexandria"
                         android:textColor="@color/white"
-                        android:textSize="150sp" />
+                        android:textSize="100sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -120,7 +120,7 @@
                         android:background="@color/white" />
 
                     <TextView
-                        android:id="@+id/reh"
+                        android:id="@+id/hum"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -137,16 +137,16 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/risk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="199dp"
                 android:layout_marginBottom="249dp"
-                android:textColor="@color/white"
                 android:text="2급 '관심'"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/white" />
 
             <LinearLayout
                 android:id="@+id/layout_dust"
@@ -181,7 +181,7 @@
                         android:background="@color/white" />
 
                     <TextView
-                        android:id="@+id/pm10"
+                        android:id="@+id/temMax"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
@@ -217,7 +217,7 @@
                         android:background="@color/white" />
 
                     <TextView
-                        android:id="@+id/pm25"
+                        android:id="@+id/tempMin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
@@ -251,7 +251,7 @@
                 android:src="@drawable/doctor" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -271,9 +271,9 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="115dp"
                 android:layout_marginBottom="287dp"
-                android:textColor="@color/white_56"
                 android:text="질병위험도"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white_56" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
